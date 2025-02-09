@@ -7,6 +7,12 @@
   #heading{
     text-align: center;
   }
+  span{
+    color: green;
+  }
+  small{
+    color: red;
+  }
 </style>
 <body>
 <h1 id="heading"></h1>
@@ -17,9 +23,9 @@ const rate = parseFloat(prompt("Pease enter rate of interest (%):"));
 const time = parseFloat(prompt("Pease enter years:"));
 if(!isNaN(principal) && !isNaN(rate) && !isNaN(time)) {
   const simpleInterest = (principal * rate * time) / 100;
-  document.getElementById('heading').innerHTML = `Simple Interest is: ${simpleInterest}`;
+  document.getElementById('heading').innerHTML = `Simple Interest is: <span>${simpleInterest}<span>`;
   } else {
-    document.getElementById('heading').innerHTML = 'Please enter numeric values';
+    document.getElementById('heading').innerHTML = `<small>Please enter numeric values<small>`;
 }
 
 //is palindrome string
