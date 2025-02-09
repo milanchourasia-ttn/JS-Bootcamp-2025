@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+<body>
+<script type="text/javascript">
+//Prompt for amount, interest rate and no. of years and calculate simple interest.
+const principal = parseFloat(prompt("Pease enter principal amount:"));
+const rate = parseFloat(prompt("Pease enter rate of interest (%):"));
+const time = parseFloat(prompt("Pease enter years:"));
+if(!isNaN(principal) && !isNaN(rate) && !isNaN(time)) {
+  const simpleInterest = (principal * rate * time) / 100;
+  console.log("Simple Interest:" + simpleInterest);
+  } else {
+    console.log("Please enter numeric values.");
+}
+
+//is palindrome string
+function palindrome(str) {
+  let strLowerCase = str.toLowerCase() 
+  return strLowerCase === strLowerCase.split("").reverse().join("");
+}
+console.log("Is palindrome string - madam", palindrome("madam")); 
+console.log("Is palindrome string - hello", palindrome("hello")); 
+
+//Area of circle
+function areaOfCircle(radius) {
+  if(!isNaN(radius) && radius > 0) {
+    return Math.PI * radius ** 2
+    } else {
+      console.log("Please pass numeric values.");
+  }
+}
+console.log("Area of circle " + areaOfCircle(8));
+
+//Copy information of one object to another and log it to console.
+const obj1 = { 
+  name: "Shivang",
+  age: 22,
+  address: {
+    city: "Noida",
+    State: "Uttar Pradesh",
+    pineCode: "201301"
+  }
+};
+//Method1 //Shallow Copy
+const obj2 = Object.assign({}, obj1);
+console.log("Copy object - Shallow Copy",obj2);
+//Method2 //Deep Copy
+const obj3 = JSON.parse(JSON.stringify(obj1)); 
+console.log("Copy object - Deep Copy",obj3);
+
+//create a list of objects of Employee with info as follow :
+// Name, age, salary ,DOB
+const employee = [
+  {
+    Name: 'Shivang',
+    age: '22',
+    salary: 300000,
+    dob: "01-02-2003",
+  },
+  {
+    Name: 'Lisa',
+    age: '27',
+    salary: 20000,
+    dob: "01-02-2000",
+  },
+  {
+    Name: 'Shreeja',
+    age: '24',
+    salary: 25000,
+    dob: "01-02-2001",
+  },
+  {
+    Name: 'John',
+    age: '27',
+    salary: 800,
+    dob: "01-02-1998",
+  },
+  {
+    Name: 'Jasica',
+    age: '30',
+    salary: 900,
+    dob: "01-02-1995",
+  }
+]
+console.log("employee:", employee)
+
+//filter all employees with salary greater than 5000
+const employeeGreater5000 = employee.filter((item)=>item.salary > 5000).map((item)=>item);
+console.log("employees with salary greater than 5000:", employeeGreater5000)
+
+//group employee on the basis of their age
+const groupedByAge = employee.reduce((acc, cur) => {
+  if (!acc[cur.age]) {
+    acc[cur.age] = [];
+  }
+  acc[cur.age].push(cur);
+  return acc;
+}, {});
+console.log("employees grouped by age:", groupedByAge);
+
+//fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.
+const employeeLess1000 = employee.filter((item)=>item.salary < 1000 && item.age > 20)
+.map((item)=>{
+  return {...item, salary: item.salary * 5}
+})
+console.log("employees with salary less than 1000 and age greater than 20 & increment 5 times their salary", employeeLess1000)
+
+</script>
+</body>
+</html>
+
