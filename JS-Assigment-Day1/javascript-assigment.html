@@ -3,8 +3,13 @@
 <head>
 <title>JavaScript</title>
 </head>
+<style type="text/css">
+  #heading{
+    text-align: center;
+  }
+</style>
 <body>
-<h1 id="heading" style="text-align: center;"></h1>
+<h1 id="heading"></h1>
 <script type="text/javascript">
 //Prompt for amount, interest rate and no. of years and calculate simple interest.
 const principal = parseFloat(prompt("Pease enter principal amount:"));
@@ -12,10 +17,8 @@ const rate = parseFloat(prompt("Pease enter rate of interest (%):"));
 const time = parseFloat(prompt("Pease enter years:"));
 if(!isNaN(principal) && !isNaN(rate) && !isNaN(time)) {
   const simpleInterest = (principal * rate * time) / 100;
-  // console.log("Simple Interest is:" + simpleInterest);
   document.getElementById('heading').innerHTML = `Simple Interest is: ${simpleInterest}`;
   } else {
-    // console.log("Please enter numeric values.");
     document.getElementById('heading').innerHTML = 'Please enter numeric values';
 }
 
