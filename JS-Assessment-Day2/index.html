@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript assessment Day - 2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Q1.Create a object calculator, which will have methods read,add,subtract and multiply. read method will use prompt to ask two values from user.  
+        </h3>
+        <button id="read-method">Read / Add / subtract</button>
+        <p id="add"></p>
+        <p id="subtract"></p>
+        <p id="multiply"></p>
+        <h3>Q2.Create an object temperatureConverter with methods:  
+        </h3>
+        <button id="read-temperature">Temperature Converter</button>
+        <p id="celsius"></p>
+        <p id="fahrenheit"></p>
+        <p id="kelvin"></p>
+        <h3>Q3.Predict the output of the given snippet.</h3>
+        <pre>
+var x = 5;
+function first(){
+    console.log(x);
+    var y = 10;
+    function second(){
+        console.log(y)
+        console.log(z)
+        var z = 20;
+    }
+    second();
+}
+first();
+console.log(y);
+
+// OUTPUT
+// 5
+//10
+//undefined
+// ReferenceError: y is not defined
+        </pre>
+        <h3>Q.Explain how hoisting affects the execution  of console.log(z) in second().</h3>
+        <p>Due to hoisting, z is declared at the top of second function but remains undefined until it is assigned a value.</p>
+        <h3>Q.Explain the scope chain for console.log(y) in second().</h3>
+        <p>When console.log(y) is executed inside second function,then below steps to be follow:<br/>
+            1. Check in the Local Scope <br/>
+            2. Check in the Outer Scope <br/>
+            3. Check in the Global Scope
+        </p>
+        <h3>Q.What happens when console.log(y) is executed outside first() (Line 4)? Why?</h3>
+        <p>ReferenceError: y is not defined - because the console.log(y); at Line 4 is trying to access y in the global scope But y is only defined inside first(), and it's not accessible outside.</p>
+<h3>Q.Modify the code to use let instead of var and observe any differences.</h3>
+        <pre>
+let x = 5;
+function first() {
+    console.log(x);
+    let y = 10;
+    function second() {
+        console.log(y);
+        console.log(z);
+        let z = 20;
+    }
+    second();
+}
+first();
+console.log(y);
+
+Output
+5 
+10
+ReferenceError: Cannot access 'z' before initialization
+due to ReferenceError of 'z' JavaScript can not goes bottom or read console.log(y) value;
+        </pre>
+    </div>
+    <script src="javascript-Q1.js"></script>
+    <script src="javascript-Q2.js"></script>
+    <script src="javascript-Q3.js"></script> 
+</body>
+</html>
+
