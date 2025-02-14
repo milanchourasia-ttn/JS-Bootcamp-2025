@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript assessment Day - 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Q3.Explain difference between Bind and Call (example).</h3>
+        <h4>Bind method</h4>
+        <p>The bind method returns a new function with the specified this context, without invoking function
+            immediately.</p>
+<code>
+    <pre>
+        const person = {
+        name: "Shivang",
+        personFunction: function (arg) {
+            console.log(`${arg} I am ${this.name}`);
+        },
+        };
+        const person2 = {
+        name: "Shreeja",
+        };
+        const greetBind = person.personFunction.bind(person, "Hello");
+        greetBind();
+    </pre>
+</code>
+        <h4>Call method</h4>
+        <p>The call method invokes the function immediately with a specified this context and arguments passed
+            individually.</p>
+
+<code>
+    <pre>
+        const person = {
+        name: "Shivang",
+        personFunction: function (arg) {
+            console.log(`${arg} I am ${this.name}`);
+        },
+        };
+        const person2 = {
+        name: "Shreeja",
+        };
+        person.personFunction.call(person2, "Hi");
+    </pre>
+</code>
+    <h3>Q6. Create a counter using closures.</h3>   
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <span>Counter: <span id="counter">0</span></span>
+    </div>
+    <script src="javascript-Q1.js"></script>
+    <script src="javascript-Q2.js"></script>
+    <script src="javascript-Q3.js"></script>
+    <script src="javascript-Q4.js"></script>
+    <script src="javascript-Q5.js"></script>
+    <script src="javascript-Q6.js"></script>
+    <script src="javascript-Q7.js"></script>
+</body>
+
+</html>
