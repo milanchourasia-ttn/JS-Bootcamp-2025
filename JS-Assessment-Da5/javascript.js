@@ -1,3 +1,5 @@
+// import { areaOfCircle, areaOfRectangle, surfaceAreaOfCylinder } from './javascript-Q5.js';
+// import { getUniqueElements } from './javascript-Q6.js';
 //Q1. Filter unique array members using Set.
 const arr = [1, 2, 3, 4, 3, 2, 1, 5];
 const uniqueArr = [...new Set(arr)];
@@ -82,10 +84,17 @@ console.log(staticFunctions.formatString("Hi, My Name is Milan"));
 
 
 //Q5. Import a module containing the constants and method for calculating area of circle, rectangle, cylinder.
+console.log("Area of Circle:", areaOfCircle(5));
+console.log("Area of Rectangle:", areaOfRectangle(4, 6));
 
+let cylinderAreas = surfaceAreaOfCylinder(3, 7);
+console.log("Lateral Surface Area of Cylinder:", cylinderAreas.lateralSurfaceArea);
+console.log("Total Surface Area of Cylinder:", cylinderAreas.totalSurfaceArea);
 
 //Q6. Import a module for filtering unique elements in an array.
-
+const array = [1, 2, 3, 4, 3, 2, 1, 5];
+const uniqueArray = getUniqueElements(array);
+console.log(uniqueArray);
 
 //7. Write a program to flatten a nested array to single level using arrow functions.
 // Method 1
