@@ -1,5 +1,5 @@
-// import { areaOfCircle, areaOfRectangle, surfaceAreaOfCylinder } from './javascript-Q5.js';
-// import { getUniqueElements } from './javascript-Q6.js';
+import { areaOfCircle, areaOfRectangle, surfaceAreaOfCylinder } from './javascript-Q5.js';
+import { getUniqueElements } from './javascript-Q6.js';
 //Q1. Filter unique array members using Set.
 const arr = [1, 2, 3, 4, 3, 2, 1, 5];
 const uniqueArr = [...new Set(arr)];
