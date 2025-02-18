@@ -1,0 +1,35 @@
+.container{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.text-center{
+  text-align: center;
+}
+.count{
+  margin: 0 10px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+button {
+  min-width: 120px;
+  padding: 5px 15px 5px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  height: 35px;
+  color: #fff;
+  background: #e10092;
+  border: none;
+  display: inline-flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: all .5sease-out;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+}
