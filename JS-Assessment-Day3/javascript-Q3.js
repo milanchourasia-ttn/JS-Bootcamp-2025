@@ -14,7 +14,10 @@
 // Example
 const person = {
     name: "Shivang",
-    personFunction: function (arg) {
+    // personFunction: function (arg) {
+    //   console.log(`${arg} I am ${this.name}`);
+    // },
+    personFunction:(arg) => {
       console.log(`${arg} I am ${this.name}`);
     },
   };
