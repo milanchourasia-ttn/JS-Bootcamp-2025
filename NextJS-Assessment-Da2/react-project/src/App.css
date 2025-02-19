@@ -33,3 +33,11 @@ button {
   position: relative;
   cursor: pointer;
 }
+.input-text{
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 35px;
+  min-width: 200px;
+  padding: 0 10px;
+}

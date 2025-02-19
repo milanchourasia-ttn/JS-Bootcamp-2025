@@ -20,6 +20,7 @@ const TodoList = () => {
         value={inputTodo} 
         onChange={(e) => setInputTodo(e.target.value)} 
         placeholder="todo's"
+        className="input-text"
       />
       <button onClick={handleTodo}>
         Add Todo
