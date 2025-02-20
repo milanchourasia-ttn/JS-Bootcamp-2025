@@ -22,6 +22,7 @@ export default function Recipies() {
         console.error("Error fetching recipes:", error);
       }
     };
+
     fetchRecipes();
   }, []);
   return (
