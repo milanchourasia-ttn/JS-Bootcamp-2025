@@ -31,19 +31,19 @@ export default function Recipies() {
       <table className="w-full border border-gray-300 rounded-lg">
         <thead>
           <tr>
-            <th className="border border-gray-300 rounded-lg">ID</th>
-            <th className="border border-gray-300 rounded-lg">Name</th>
-            <th className="border border-gray-300 rounded-lg">Prep Time (Minutes)</th>
-            <th className="border border-gray-300 rounded-lg">Servings</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">ID</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Name</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Prep Time (Minutes)</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Servings</th>
           </tr>
         </thead>
         <tbody>
           {recipes.map((recipe) => (
             <tr key={recipe.id}>
-              <td className="border border-gray-300 rounded-lg text-center">{recipe.id}</td>
-              <td className="border border-gray-300 rounded-lg text-center">{recipe.name}</td>
-              <td className="border border-gray-300 rounded-lg text-center">{recipe.prepTimeMinutes}</td>
-              <td className="border border-gray-300 rounded-lg text-center">{recipe.servings}</td>
+              <td className="border border-gray-300 text-center">{recipe.id}</td>
+              <td className="border border-gray-300 text-center">{recipe.name}</td>
+              <td className="border border-gray-300 text-center">{recipe.prepTimeMinutes}</td>
+              <td className="border border-gray-300 text-center">{recipe.servings}</td>
             </tr>
           ))}
         </tbody>

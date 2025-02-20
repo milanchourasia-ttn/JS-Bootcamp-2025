@@ -5,6 +5,7 @@ export default function Header() {
   return (
     <div className="header flex items-center bg-[#220046] min-h-[60px]  justify-between">
       <div className="container flex items-center justify-between">
+        <Link href="/">
         <Image
           className="filter invert-[100%]"
           src="/next.svg"
@@ -13,6 +14,7 @@ export default function Header() {
           height={38}
           priority
         />
+        </Link>
         <nav className="flex justify-end">
           <ul className="flex space-x-14 text-[#fff]">
             <li>

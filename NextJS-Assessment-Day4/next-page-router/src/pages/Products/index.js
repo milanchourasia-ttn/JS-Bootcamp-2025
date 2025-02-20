@@ -23,11 +23,11 @@ export default function Products() {
       <table className="w-full border border-gray-300 rounded-lg">
         <thead>
           <tr>
-            <th className="border border-gray-300 p-2">ID</th>
-            <th className="border border-gray-300 p-2">Title</th>
-            <th className="border border-gray-300 p-2">Description</th>
-            <th className="border border-gray-300 p-2">Category</th>
-            <th className="border border-gray-300 p-2">Price</th>
+            <th className="border border-gray-300 p-2 bg-[#220046] text-[#fff]">ID</th>
+            <th className="border border-gray-300 p-2 bg-[#220046] text-[#fff]">Title</th>
+            <th className="border border-gray-300 p-2 bg-[#220046] text-[#fff]">Description</th>
+            <th className="border border-gray-300 p-2 bg-[#220046] text-[#fff]">Category</th>
+            <th className="border border-gray-300 p-2 bg-[#220046] text-[#fff]">Price</th>
           </tr>
         </thead>
         <tbody>
