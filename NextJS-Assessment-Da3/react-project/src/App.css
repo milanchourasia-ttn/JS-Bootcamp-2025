@@ -53,3 +53,9 @@ button {
 .min-height300{
   min-height: 300px;
 }
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
