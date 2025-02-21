@@ -17,7 +17,7 @@ export default function ProductListing() {
     }
     fetchData()
   }, [])
-  console.log('name', productData)
+  
   return (
     <div className="container pb-[100px]">
       <h1 className="text-center pt-[50px] font-extrabold text-[30px]">{productData?.title}</h1>
@@ -26,8 +26,8 @@ export default function ProductListing() {
         {productData?.details?.map((item, index) =>
           <li key={index}>
             <Link href={`/products/${item.id}`}>
-            {item.name}
-            ({item.id})
+            {item?.name}
+            ({item?.id})
             </Link>
           </li>
         )}

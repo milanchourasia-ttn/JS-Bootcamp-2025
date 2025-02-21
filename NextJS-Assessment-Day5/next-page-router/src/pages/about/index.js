@@ -17,7 +17,6 @@ export default function About() {
     }
     fetchData()
   },[])
-  console.log('aa',aboutData)
   return (
     <div className="container pb-[100px]">
       <h1 className="text-center pt-[50px] font-extrabold text-[30px]">{aboutData?.title}</h1>
