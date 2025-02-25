@@ -1,0 +1,7 @@
+
+.textCenter{
+    text-align: center;
+}
+.item:hover{
+    color: var(--link-color);
+}

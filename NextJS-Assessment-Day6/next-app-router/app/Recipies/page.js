@@ -1,0 +1,46 @@
+"use client";
+import { useEffect, useState } from "react";
+
+export default function Recipies() {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const response = await fetch("https://dummyjson.com/recipes");
+        const data = await response.json();
+        const data_slice = data.recipes.slice(0, 10)
+        setRecipes(data_slice);
+      } catch (error) {
+        console.error("Error fetching recipes:", error);
+      }
+    };
+
+    fetchRecipes();
+  }, []);
+  return (
+    <div className="container pb-[100px]">
+      <h1 className="text-center py-[50px] font-extrabold text-[30px]">Recipes</h1>
+      <table className="w-full border border-gray-300 rounded-lg">
+        <thead>
+          <tr>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">ID</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Name</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Prep Time (Minutes)</th>
+            <th className="border border-gray-300 bg-[#220046] text-[#fff]">Servings</th>
+          </tr>
+        </thead>
+        <tbody>
+          {recipes.map((recipe) => (
+            <tr key={recipe.id}>
+              <td className="border border-gray-300 text-center">{recipe.id}</td>
+              <td className="border border-gray-300 text-center">{recipe.name}</td>
+              <td className="border border-gray-300 text-center">{recipe.prepTimeMinutes}</td>
+              <td className="border border-gray-300 text-center">{recipe.servings}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
