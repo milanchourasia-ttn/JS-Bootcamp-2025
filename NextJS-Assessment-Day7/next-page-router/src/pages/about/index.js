@@ -24,6 +24,7 @@ const AboutPage = () => {
   console.log('data111', data)
   return (
     <div className="container">
+      <h1>Q2. Implement useContext hook to implement a loader in a page while api is in loading state.      </h1>
       {isLoading ?
         <div className="loader">Loading...</div>
         :

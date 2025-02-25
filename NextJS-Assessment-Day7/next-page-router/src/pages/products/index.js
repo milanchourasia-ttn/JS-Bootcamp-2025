@@ -36,13 +36,11 @@ const ProductPage = () => {
 
   return (
     <div className="container text-center">
-      <h1>Products</h1>
+      <h1>Q1.Implement useReducer hook to GET, ADD, DELETE products.</h1>
 
       {state.loading && <p>Loading...</p>}
       {state.error && <p style={{ color: "red" }}>{state.error}</p>}
-
-      <button onClick={addProduct}>Add Product</button>
-
+      <button onClick={addProduct} style={{background:"green"}}>Add Product</button>
       <ul className="p-list">
         {state.products.map((product) => (
           <li key={product.id}>

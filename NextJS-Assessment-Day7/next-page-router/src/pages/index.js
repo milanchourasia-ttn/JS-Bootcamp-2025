@@ -1,21 +1,29 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchQuotes } from "./redux/quoteActions";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Home = () => {
+  const dispatch = useDispatch();
+  const { quotes, loading, error } = useSelector((state) => state.quotes);
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  useEffect(() => {
+    dispatch(fetchQuotes()); // Fetch quotes on mount
+  }, [dispatch]);
 
-export default function Home() {
   return (
-    <div>
-      <div className="flex justify-center items-center w-full min-h-[500px]">
-        <h3 className="text-center mb-5 font-extrabold text-[100px]">Home Page</h3>
-      </div>
+    <div className="container">
+      <h1>Q3.Implement Redux to fetch api 'https://dummyjson.com/quotes'.      </h1>
+      {loading && <p>Loading...</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      <ul>
+        {quotes.map((quote) => (
+          <li key={quote.id}>
+            "{quote.quote}" - <strong>{quote.author}</strong>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default Home;
