@@ -1,0 +1,41 @@
+{
+  "teachers": [
+    { "id": 1, "name": "John Doe", "subject": "Mathematics" },
+    { "id": 2, "name": "Jane Smith", "subject": "Physics" },
+    { "id": 3, "name": "Robert Brown", "subject": "Chemistry" },
+    { "id": 4, "name": "Emily Johnson", "subject": "Biology" },
+    { "id": 5, "name": "Michael Davis", "subject": "History" }
+  ],
+  "students": [
+    { "id": 1, "name": "Alice", "teacherId": 1 },
+    { "id": 2, "name": "Bob", "teacherId": 1 },
+    { "id": 3, "name": "Charlie", "teacherId": 1 },
+    { "id": 4, "name": "David", "teacherId": 1 },
+    { "id": 5, "name": "Emma", "teacherId": 1 },
+    { "id": 6, "name": "Frank", "teacherId": 2 },
+    { "id": 7, "name": "Grace", "teacherId": 2 },
+    { "id": 8, "name": "Hannah", "teacherId": 2 },
+    { "id": 9, "name": "Isaac", "teacherId": 2 },
+    { "id": 10, "name": "Jack", "teacherId": 2 },
+    { "id": 11, "name": "Kate", "teacherId": 3 },
+    { "id": 12, "name": "Liam", "teacherId": 3 },
+    { "id": 13, "name": "Mia", "teacherId": 3 },
+    { "id": 14, "name": "Noah", "teacherId": 3 },
+    { "id": 15, "name": "Olivia", "teacherId": 3 },
+    { "id": 16, "name": "Peter", "teacherId": 4 },
+    { "id": 17, "name": "Quinn", "teacherId": 4 },
+    { "id": 18, "name": "Rachel", "teacherId": 4 },
+    { "id": 19, "name": "Sam", "teacherId": 4 },
+    { "id": 20, "name": "Tina", "teacherId": 4 },
+    { "id": 21, "name": "Uma", "teacherId": 5 },
+    { "id": 22, "name": "Victor", "teacherId": 5 },
+    { "id": 23, "name": "Wendy", "teacherId": 5 },
+    { "id": 24, "name": "Xander", "teacherId": 5 },
+    { "id": 25, "name": "Yara", "teacherId": 5 },
+    { "id": 26, "name": "Zane", "teacherId": 5 },
+    { "id": 27, "name": "Lily", "teacherId": 1 },
+    { "id": 28, "name": "Nathan", "teacherId": 2 },
+    { "id": 29, "name": "Oscar", "teacherId": 3 },
+    { "id": 30, "name": "Paula", "teacherId": 4 }
+  ]
+}
